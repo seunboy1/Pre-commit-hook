@@ -33,7 +33,7 @@ Pre-commit hooks are automated scripts that run before you commit your changes i
         pre-commit run --all-files
     ```
 
-5. You can also include other tool such as black, isort in your pre-commit checks
+5. You can also include other tool that use `pyproject.toml` such as black, isort, pytest and pylint in your pre-commit checks
 
     ```bash
 
@@ -48,6 +48,30 @@ Pre-commit hooks are automated scripts that run before you commit your changes i
             hooks:
             - id: black
                 language_version: python3.11
+
+        - repo: local
+            hooks:
+            - id: pylint
+                name: pylint
+                entry: pylint
+                language: system
+                types: [python]
+                args:
+                [
+                    # "-rn", # Only display messages
+                    # "-sn", # Don't display the score
+                    "--recursive=y"
+                ]
+
+        - repo: local
+            hooks:
+            - id: pytest
+            name: pytest
+            entry: pytest test
+            language: system
+            types: [python]
+            pass_filenames: false
+            always_run: true
     ```
 
 6. To automate pre-commit checks, you have to install the git hook scripts.

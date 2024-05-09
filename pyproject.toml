@@ -1,0 +1,10 @@
+[tool.pylint.messages_control]
+disable= [
+        "missing-function-docstring",
+        "missing-class-docstring",
+        "missing-module-docstring",
+]
+
+[tool.black]
+line-length = 83
+target-version = ["py38", "py39", "py310", "py311"]
