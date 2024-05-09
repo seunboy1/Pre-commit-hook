@@ -1,5 +1,0 @@
-isort
-black
-pytest
-pylint
-pre-commit
