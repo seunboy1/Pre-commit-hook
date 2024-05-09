@@ -82,4 +82,5 @@ Pre-commit hooks are automated scripts that run before you commit your changes i
 
 7. Now pre-commit checks is done after every commits
 8. Now you can make changes and commit. It should return something like this:
+
     ![result](./images/result.png)
