@@ -74,7 +74,7 @@ Pre-commit hooks are automated scripts that run before you commit your changes i
             always_run: true
     ```
 
-6. To automate pre-commit checks, you have to install the git hook scripts.
+6. To automate pre-commit checks, you will have to install the git hook scripts.
 
     ```bash
         pre-commit install
